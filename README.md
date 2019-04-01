@@ -10,10 +10,12 @@ ExternalTaskSensor from airlow v 1.10.3.
 *NOTE*: we currently use SQLite db. This is NOT correct. It will effectively
 create a lock on the db and allow only one job to run at a time, effectively
 making airflow work as a single worker.
+
 *NOTE2* (more important): DO NOT COPY the way we perform SQLite queries. The
 purpose of this code is to play with airflow and the LastExternalTaskSensor, not
 performing SQLite queries. Queries are built via string concatenation, which is
 a big NONO. Do not take inspiration from them.
+
 *NOTE3*: pickle/unpickle is not safe. We rely on the fact that a tweepy.Status is
 well formed object. Don't do it, in general.
 
