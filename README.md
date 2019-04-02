@@ -1,4 +1,4 @@
-# H1 Experimentation with airflow
+# Experimentation with airflow
 
 This experiment is composed by two dags, mainly using PythonOperator. A detailed
 view of what the dags are performing is provided below.
@@ -19,7 +19,7 @@ a big NONO. Do not take inspiration from them.
 *NOTE3*: pickle/unpickle is not safe. We rely on the fact that a tweepy.Status is
 well formed object. Don't do it, in general.
 
-# H1 Workflow details
+# Workflow details
 
 1. one task on a dag
 	fetch the list of candidates from wikipedia
